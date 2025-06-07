@@ -1,96 +1,127 @@
-**Indian Stock Market Analysis with MySQL**
+**Indian Equity Analysis DB**
 
+A Structured, SQL-Only Sandbox for Equity Research, Built from Scratch
 
-This exploration applies advanced SQL techniques and robust database design to perform a detailed data-driven analysis of the Indian stock market.
+This project simulates a lean research engine for analyzing the Indian stock market using only SQL. It’s designed to test trading ideas, track portfolio performance, and run technical analysis — all within a well-indexed, query-efficient database.
 
-**Overview**
+I built this because I wanted full control over structure, integrity, and insights without relying on external dashboards or bloated tools.
 
-This repository serves as an introduction to my project focused on analyzing the Indian stock market. This repository displays my competencies in creating database structures alongside advanced SQL analysis skills and making decisions based on data insights. This project was developed to exhibit how I handle actual data problems through accurate and creative solutions.
+**What This Project Covers**
 
-**Project Goals**
+ - Relational schema for equities, indices, and portfolios
 
- - Develop a solid relational database design to handle Indian stock market information including company data alongside market indices and portfolio management details.
+ - A stored procedure for loading and updating price data
 
- - Develop advanced SQL queries to perform technical analysis while evaluating portfolio performance and conducting data validation.
+ - Queries for technical indicators like RSI, Bollinger Bands, and moving averages
 
- - Through this project I demonstrate my mastery in automation techniques along with data quality assurance and performance optimization practices.
+ - Sector-level return and volatility tracking
 
- - Develop a simple-to-install project with comprehensive documentation and attractive visual design for portfolio visitors.
+ - Personal portfolio performance: unrealized P&L, percent return
 
-**Key Features**
+ - Built-in data validation logic for duplicates, weight mismatches, and missing values
 
- - **Schema Design**: The database schema includes separate tables for storing companies, indices, stock data and index constituents as well as portfolio holdings. Data integrity is maintained through foreign key relationships and unique constraints.
-
- - **Data Ingestion**: Stored procedures to load and update stock data while implementing error handling mechanisms.
-
- - **Advanced Analysis**: Technical indicators (RSI, moving averages, Bollinger Bands). Sector performance analysis. Portfolio performance tracking (unrealized P&L, percent return).
-
- - **Data Validation**: Data validation queries identify duplicate records and missing values while checking for data integrity problems.
-
- - **Performance Optimization**: Indexing and partitioning for large datasets.
-
- - **Sample Data**: This database includes prepared sample data that enables testers to conduct demonstrations and tests quickly.
+ - Indexing and partitioning for scale
 
 **Why I Built This**
 
-The crossroads of data analysis and financial systems has consistently intrigued me. Through this project I integrated my enthusiasm for SQL, data analysis work, and Indian stock market analysis into one unified portfolio segment. The project demonstrates my dedication to providing clear documentation alongside strong design principles and real-world application of sophisticated SQL techniques.
+Most equity analysis tools abstract away the logic. I wanted the opposite — a transparent, SQL-based system that reflects how real trading and portfolio tracking work.
 
-**Example Analyses**
+This was a hands-on way to push my SQL thinking beyond just syntax:
 
- - **Technical Indicators**:
+ - Schema design
 
-    - **RSI (Relative Strength Index)**: Identify overbought/oversold stocks.
+ - Window functions
 
-    - **Moving Averages & Bollinger Bands**: Identify market trends and measure market volatility.
+ - Data cleaning
 
-**Sector Performance**:
+ - Query performance
 
-Identify the sectors that deliver the best performance throughout specific periods like election quarters.
+**Technical indicator logic**
 
-**Portfolio Tracking**:
+The result is something that feels real — something I can run live ideas on.
 
-Monitor your investments by calculating unrealized P&L and keeping track of your returns.
+**Use Cases**
 
-**My Process**
+This project has helped me:
 
- - **Schema Design**: I began by creating the database schema on paper while paying close attention to normalization and relationships.
+ - Compare sector-wise performance during the **2024 Indian elections**
 
- - **Data Ingestion**: My stored procedure manages loading and updating data while maintaining high data quality standards.
+ - Backtest a simple RSI-based momentum filter across my portfolio
 
- - **Advanced Queries**: My work involved creating complex SQL queries that utilized window functions together with Common Table Expressions (CTEs) and subqueries.
+ - Flag errors in index weighting logic (e.g., NIFTY50 total ≠ 100%)
 
- - **Validation & Optimization**: I wrote queries for data validation and improved performance through index optimization and partitioning.
+ - Quantify the unrealized returns of each holding on my books
 
- - **Documentation**: The documentation of my project workflow and solutions aims to provide accessibility for other users.
+ - Simulate signals like moving average crossovers using only SQL
 
-**Challenges & Solutions**
+These aren’t hypothetical. Every query here was written to answer a real question I had while trading.
 
- - **Challenge**: Ensuring data integrity across multiple tables. **Solution**: Used foreign keys and unique constraints.
+**Key Features**
 
- - **Challenge**: Handling large datasets efficiently. Solution: Implemented indexing and partitioning.
+ - **Schema Design**
+   
+    Clean, normalized tables: companies, stock_data, indices, index_constituents, and portfolio, with all necessary foreign keys and constraints.
 
-**Documentation**
+ - **Data Ingestion**
 
- - **Project Design**: Refer to project_design.md to find detailed schema design and query logic notes.
+    The LoadStockData procedure handles conditional insert/update logic for daily stock price data. Easily extensible.
 
- - **Code Comments**: The SQL script contains extensive comments to improve clarity.
+**Technical Indicators**
 
-**Resources**
+ - **RSI (14-day)**
 
- - **MySQL Documentation**: https://dev.mysql.com/doc/
+ - **Bollinger Bands**
 
- - **GitHub README Best Practices**: Hatica Blog, HackerNoon
+ - **Moving averages (via window functions)**
 
- - **Advanced SQL Courses**: Maven Analytics, AnalystBuilder
 
-**Contributing**
+**Portfolio Logic** 
 
-You can fork this repository and submit pull requests or create new issues as needed. I welcome feedback and collaboration.
+   - P&L calculation using latest price
+   
+   - % returns and investment gain/loss
+   
+   - Tracks by symbol, purchase price, and quantity
+   
+   - Validation Checks
+   
+   - Duplicate detection (symbol/date)
+   
+   - Missing value flags
+   
+   - Index weight validation
 
-**License**
+**Performance Scaling**
 
-The MIT License applies to this project.
+ - Composite indexing on (symbol, date)
 
-Thank you for visiting my project! Please contact me if you need assistance or want to share your thoughts. Let’s connect and build something amazing together.
+ - Partitioning by date for scalable performance
 
-**Harsha Ghandikota (linkedin.com/in/harsha-ghandikota/)**
+
+**How to Use** 
+
+ - Clone the repo
+
+ - Load the indian_equity_analysis_project.sql file in any MySQL 8+ instance
+
+ - Sample data is included — no external dependencies
+
+ - Run analysis directly via included query blocks
+
+**What This Project Demonstrates**
+ 
+ - Structured thinking in schema design
+
+ - Applied SQL using CTEs, window functions, and procedural logic
+
+ - End-to-end problem solving: from ingestion to insight
+
+ - Performance-aware indexing and validation
+
+ - Practical use of SQL in real capital market workflows
+
+**Contact**
+
+**Harsha Ghandikota** 
+
+linkedin.com/in/harsha-ghandikota
