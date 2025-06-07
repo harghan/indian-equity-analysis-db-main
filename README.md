@@ -2,7 +2,7 @@
 
 A Structured, SQL-Only Sandbox for Equity Research, Built from Scratch
 
-This project simulates a lean research engine for analyzing the Indian stock market using only SQL. It’s designed to test trading ideas, track portfolio performance, and run technical analysis — all within a well-indexed, query-efficient database.
+This project simulates a lean research engine for analyzing the Indian stock market using only SQL. It’s designed to test trading ideas, track portfolio performance, and run technical analysis, all within a well-indexed, query-efficient database.
 
 I built this because I wanted full control over structure, integrity, and insights without relying on external dashboards or bloated tools.
 
@@ -24,7 +24,7 @@ I built this because I wanted full control over structure, integrity, and insigh
 
 **Why I Built This**
 
-Most equity analysis tools abstract away the logic. I wanted the opposite — a transparent, SQL-based system that reflects how real trading and portfolio tracking work.
+Most equity analysis tools abstract away the logic. I wanted the opposite: a transparent, SQL-based system that reflects how real trading and portfolio tracking work.
 
 This was a hands-on way to push my SQL thinking beyond just syntax:
 
@@ -38,7 +38,7 @@ This was a hands-on way to push my SQL thinking beyond just syntax:
 
 **Technical indicator logic**
 
-The result is something that feels real — something I can run live ideas on.
+The result is something that feels real, something I can run live ideas on.
 
 **Use Cases**
 
@@ -104,7 +104,7 @@ These aren’t hypothetical. Every query here was written to answer a real quest
 
  - Load the indian_equity_analysis_project.sql file in any MySQL 8+ instance
 
- - Sample data is included — no external dependencies
+ - Sample data is included, no external dependencies
 
  - Run analysis directly via included query blocks
 
