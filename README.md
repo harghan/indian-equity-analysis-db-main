@@ -104,9 +104,19 @@ These aren’t hypothetical. Every query here was written to answer a real quest
 
  - Load the indian_equity_analysis_project.sql file in any MySQL 8+ instance
 
- - Sample data is included, no external dependencies
-
  - Run analysis directly via included query blocks
+
+**Getting Started**
+
+To run this SQL project:
+
+1. Open your MySQL client (Workbench, CLI, etc.)
+2. Create and select a new database:
+
+   ```sql
+   CREATE DATABASE stock_market;
+   USE stock_market;
+
 
 **What This Project Demonstrates**
  
