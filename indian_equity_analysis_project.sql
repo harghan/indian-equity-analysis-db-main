@@ -1,5 +1,12 @@
 -- Indian Stock Market DB by Harsha Ghandikota
 
+-- NOTE: Please create and select your database manually before running this script.
+-- For example:
+--   CREATE DATABASE stock_market;
+--   USE stock_market;
+
+-- Begin schema setup below:
+
 -- Reset DB
 DROP DATABASE IF EXISTS stock_market;
 CREATE DATABASE stock_market;
